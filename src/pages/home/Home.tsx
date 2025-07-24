@@ -1,14 +1,46 @@
-import React from "react";
 import "./Home.css";
-import homeLogo from "../../assets/elevada-portatil.jpg";
 
-const home = () => {
+function Home() {
   return (
     <>
-      <h1 className="titulo">home</h1>
-      <img src={homeLogo} className="img" alt="Imagem tela inicial" />
+      <div
+        style={{
+          width: "100vw",
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <div>
+          <div
+            style={{
+              width: "80vw",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+            }}
+          >
+            <h2>Seja Bem Vinde!</h2>
+            <p>Expresse aqui seus pensamentos e opniões</p>
+          </div>
+
+          <div
+            style={{
+              width: "80vw",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+            }}
+          >
+            <img
+              src="https://i.imgur.com/VpwApCU.png"
+              alt="Imagem da Página Home"
+              width="400px"
+            />
+          </div>
+        </div>
+      </div>
     </>
   );
-};
+}
 
-export default home;
+export default Home;
