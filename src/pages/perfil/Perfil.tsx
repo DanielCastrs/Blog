@@ -1,6 +1,7 @@
 import { useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthContext";
+import ModalPerfil from "../../components/perfil/modalperfil/ModalPerfil";
 
 function Perfil() {
   const navigate = useNavigate();
@@ -31,10 +32,17 @@ function Perfil() {
 
         <div
           className="relative mt-[-6rem] h-72 flex flex-col 
-                    bg-sky-500 text-white text-2xl items-center justify-center"
+                    bg-red-900 text-white text-2xl items-center justify-center shadow-lg"
         >
-          <p>Nome: {usuario.nome} </p>
-          <p>Email: {usuario.usuario}</p>
+          <div className="flex flex-col justify-center items-center">
+            <p className="">Nome: {usuario.nome} </p>
+            <p>Email: {usuario.usuario}</p>
+          </div>
+          <div className="flex justify-around gap-4">
+            <div className="flex justify-around gap-4">
+              <ModalPerfil />
+            </div>
+          </div>
         </div>
       </div>
     </div>

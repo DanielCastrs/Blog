@@ -12,6 +12,8 @@ function ListaPostagens() {
   const [postagens, setPostagens] = useState<Postagem[]>([]);
 
   const { usuario, handleLogout } = useContext(AuthContext);
+
+  const [busca, setBusca] = useState("");
   const token = usuario.token;
 
   async function buscarPostagens() {
@@ -22,7 +24,7 @@ function ListaPostagens() {
         },
       });
     } catch (error: any) {
-      if (error.toString().includes("403")) {
+      if (error.toString().includes("401")) {
         handleLogout();
       }
     }
@@ -51,15 +53,27 @@ function ListaPostagens() {
           wrapperClass="dna-wrapper mx-auto"
         />
       )}
-      <div className="flex justify-center w-full my-4">
-        <div className="container flex flex-col mx-2">
-          <div
-            className="container mx-auto my-4 
+      <div className="">
+        <div className=" flex justify-center">
+          <label className="hidden">caixa de busca aqui</label>
+          <input
+            type="text"
+            name="busca"
+            placeholder="Digite aqui sua busca de postagem"
+            className="w-full max-w-md border border-black rounded-full px-4 py-2 m-1 "
+            value={busca}
+          ></input>
+        </div>
+        <div className="flex justify-center w-full my-4 ">
+          <div className="container flex flex-col mx-2">
+            <div
+              className="container mx-auto my-4 
                         grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
-          >
-            {postagens.map((postagem) => (
-              <CardPostagens key={postagem.id} postagem={postagem} />
-            ))}
+            >
+              {postagens.map((postagem) => (
+                <CardPostagens key={postagem.id} postagem={postagem} />
+              ))}
+            </div>
           </div>
         </div>
       </div>

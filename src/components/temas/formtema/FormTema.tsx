@@ -63,7 +63,7 @@ function FormTema() {
         });
         alert("O Tema foi atualizado com sucesso!");
       } catch (error: any) {
-        if (error.toString().includes("403")) {
+        if (error.toString().includes("401")) {
           handleLogout();
         } else {
           alert("Erro ao atualizar o tema.");
@@ -76,7 +76,7 @@ function FormTema() {
         });
         alert("O Tema foi cadastrado com sucesso!");
       } catch (error: any) {
-        if (error.toString().includes("403")) {
+        if (error.toString().includes("401")) {
           handleLogout();
         } else {
           alert("Erro ao cadastrar o tema.");
@@ -107,8 +107,8 @@ function FormTema() {
           />
         </div>
         <button
-          className="rounded text-slate-100 bg-indigo-400 
-                               hover:bg-indigo-800 w-1/2 py-2 mx-auto flex justify-center"
+          className="rounded text-slate-100 bg-red-400 
+                               hover:bg-red-800 w-1/2 py-2 mx-auto flex justify-center"
           type="submit"
         >
           {isLoading ? (

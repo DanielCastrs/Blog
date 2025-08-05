@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthContext";
+import { FingerprintIcon } from "@phosphor-icons/react";
 
 function Navbar() {
   const navigate = useNavigate();
@@ -16,12 +17,13 @@ function Navbar() {
   return (
     <>
       <div
-        className="w-full bg-indigo-900 text-white
+        className="w-full bg-red-900 text-white
                 flex justify-center py-4"
       >
         <div className="container flex justify-between text-lg">
-          <Link to="/home" className="text-2xl font-bold">
-            Blog Pessoal
+          <Link to="/home" className="flex text-2xl font-bold">
+            <FingerprintIcon size={32} className=""></FingerprintIcon>
+            <label className=" px-2">Blog Pessoal</label>
           </Link>
 
           <div className="flex gap-4">

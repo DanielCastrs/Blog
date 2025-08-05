@@ -9,10 +9,10 @@ function CardPostagem({ postagem }: CardPostagensProps) {
   return (
     <div
       className="border-slate-900 border 
-            flex flex-col rounded overflow-hidden justify-between"
+            flex flex-col rounded overflow-hidden justify-between shadow-2xs"
     >
       <div>
-        <div className="flex w-full bg-indigo-400 py-2 px-4 items-center gap-4">
+        <div className="flex w-full bg-red-400 py-2 px-4 items-center gap-4 ">
           <img
             src={postagem.usuario?.foto}
             className="h-12 rounded-full"
@@ -38,7 +38,7 @@ function CardPostagem({ postagem }: CardPostagensProps) {
       <div className="flex">
         <Link
           to={`/editarpostagem/${postagem.id}`}
-          className="w-full text-slate-100 bg-indigo-400 hover:bg-indigo-800 
+          className="w-full text-white bg-green-600 hover:bg-green-800 
     flex items-center justify-center py-2"
         >
           <button>Editar</button>
