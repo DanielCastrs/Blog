@@ -30,7 +30,7 @@ function FormTema() {
 
   useEffect(() => {
     if (token === "") {
-      alert("Você precisa estar logado!");
+      // alert("Você precisa estar logado!");
       navigate("/");
     }
   }, [token]);
