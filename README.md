@@ -3,6 +3,7 @@
 Projeto **Blog Pessoal**, desenvolvido em aula como parte do aprendizado de **React** e **Vite**.
 O objetivo é criar uma aplicação web onde o usuário pode visualizar e interagir com postagens, aplicando conceitos de **componentização, rotas, estilização com Tailwind e consumo de API**.
 
+🌐 Deploy online: https://blog-murex-pi-63.vercel.app
 ---
 
 ## 🛠️ Tecnologias utilizadas
