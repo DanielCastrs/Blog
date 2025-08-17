@@ -30,7 +30,7 @@ Clone o repositório e instale as dependências:
 git clone https://github.com/SEU-USUARIO/blog-pessoal.git
 
 # Acesse a pasta
-cd blog-pessoal
+cd blog
 
 # Instale as dependências
 npm install
