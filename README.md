@@ -1,69 +1,89 @@
-# React + TypeScript + Vite
+# 📖 Blog Pessoal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto **Blog Pessoal**, desenvolvido em aula como parte do aprendizado de **React** e **Vite**.
+O objetivo é criar uma aplicação web onde o usuário pode visualizar e interagir com postagens, aplicando conceitos de **componentização, rotas, estilização com Tailwind e consumo de API**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Tecnologias utilizadas
 
-## Expanding the ESLint configuration
+Este projeto foi construído com:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* [React](https://react.dev/) (v19)
+* [Vite](https://vitejs.dev/)
+* [React Router DOM](https://reactrouter.com/) (v7)
+* [Axios](https://axios-http.com/)
+* [TailwindCSS](https://tailwindcss.com/)
+* [React Toastify](https://fkhadra.github.io/react-toastify/)
+* [React Loader Spinner](https://mhnpd.github.io/react-loader-spinner/)
+* [ReactJS Popup](https://react-popup.elazizi.com/)
+* [Phosphor Icons](https://phosphoricons.com/)
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 🚀 Como executar o projeto
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Clone o repositório e instale as dependências:
+
+```bash
+# Clone o repositório
+git clone https://github.com/SEU-USUARIO/blog-pessoal.git
+
+# Acesse a pasta
+cd blog-pessoal
+
+# Instale as dependências
+npm install
+
+# Rode o projeto
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+A aplicação estará disponível em: **[http://localhost:5173/](http://localhost:5173/)**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## ✨ Funcionalidades
+
+* 📌 Exibição de postagens
+* 🔗 Navegação entre páginas com React Router
+* 🎨 Estilização responsiva com TailwindCSS
+* 🔔 Notificações com React Toastify
+* ⏳ Indicadores de carregamento (Loader Spinner)
+
+---
+
+## 📂 Estrutura do projeto (simplificada)
+
 ```
+blog-pessoal/
+ ├── public/         # Arquivos estáticos
+ ├── src/
+ │   ├── assets/     # Imagens e ícones
+ │   ├── components/ # Componentes reutilizáveis
+ │   ├── pages/      # Páginas principais
+ │   ├── services/   # Configuração de API (Axios)
+ │   └── App.tsx     # Componente raiz
+ ├── package.json
+ └── vite.config.js
+```
+
+---
+
+## 📚 Aprendizados
+
+Este projeto foi desenvolvido em sala de aula, com foco em:
+
+* Estruturação de um projeto React com Vite
+* Componentização e reuso de código
+* Gerenciamento de rotas com React Router
+* Estilização com TailwindCSS
+* Consumo de APIs usando Axios
+
+---
+
+## 📜 Licença
+
+Este projeto foi criado para fins educacionais.
+Se desejar, você pode adicionar uma licença [MIT](https://choosealicense.com/licenses/mit/).
+
